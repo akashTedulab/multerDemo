@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 
 
-const app = express()                                                                             // Creating instace of express
+const app = express()                                                                             // Creating instance of express
 
 app.post('/uploadDemo', upload.array('manyFiles'), function (req, res, next) {                    // Creating post api to upload files
     res.send('File uploaded please check /public/uploads folder')
